@@ -1,8 +1,7 @@
 import "./globals.css";
-import type { Metadata } from "next";
 import { raleway } from "./lib/fonts";
 import Header from "./components/Header";
-
+import Script from "next/script";
 export const metadata = {
   title: "Benim Blogum",
   description: "Burası benim blogum",
@@ -15,7 +14,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <head>
+      <body
+        className={`${raleway.className} min-h-screen flex flex-col flex-1 bg-gradient-to-r from-pink-300 via-purple-300 to-indigo-400   `}
+      >
+        <Header />
+        <div className="background">
+          <div className="gradient-blur" />
+        </div>
+        {children}
         <script
           data-name="BMC-Widget"
           data-cfasync="false"
@@ -27,16 +33,8 @@ export default function RootLayout({
           data-position="Right"
           data-x_margin="18"
           data-y_margin="18"
+          defer
         ></script>
-      </head>
-      <body
-        className={`${raleway.className} min-h-screen flex flex-col flex-1 bg-gradient-to-r from-pink-300 via-purple-300 to-indigo-400   `}
-      >
-        <Header />
-        <div className="background">
-          <div className="gradient-blur" />
-        </div>
-        {children}
       </body>
     </html>
   );

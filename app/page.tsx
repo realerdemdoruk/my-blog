@@ -10,27 +10,24 @@ export default function Blog() {
     compareDesc(new Date(a.publishDate), new Date(b.publishDate))
   );
 
-  const TypingAnimation = React.memo(
-    () => {
-      return (
-        <TypeAnimation
-          sequence={[
-            // Same substring at the start will only be typed out once, initially
-            "Blogs",
-            2000, // wait 1s before replacing "Mice" with "Hamsters"
-            "B",
-            100,
-          ]}
-          wrapper="span"
-          preRenderFirstString={true}
-          speed={50}
-          style={{ fontSize: "1em", display: "inline-block" }}
-          repeat={Infinity}
-        />
-      );
-    },
-    (props, prevProps) => true
-  );
+  const TypingAnimation = () => {
+    return (
+      <TypeAnimation
+        sequence={[
+          // Same substring at the start will only be typed out once, initially
+          "Blogs",
+          2000, // wait 1s before replacing "Mice" with "Hamsters"
+          "B",
+          100,
+        ]}
+        wrapper="span"
+        preRenderFirstString={true}
+        speed={50}
+        style={{ fontSize: "1em", display: "inline-block" }}
+        repeat={Infinity}
+      />
+    );
+  };
 
   return (
     <main className="z-10 mx-auto max-w-3xl flex flex-col w-full px-4 py-10">
