@@ -2,6 +2,7 @@ import "./globals.css";
 import { raleway } from "./lib/fonts";
 import Header from "./components/Header";
 import Script from "next/script";
+
 export const metadata = {
   title: "Benim Blogum",
   description: "Burası benim blogum",
@@ -15,7 +16,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${raleway.className} min-h-screen flex flex-col flex-1 bg-gradient-to-r from-pink-300 via-purple-300 to-indigo-400   `}
+        className={`${raleway.className} min-h-screen flex flex-col flex-1 dark:bg-slate-800 bg-pink-300`}
       >
         <Header />
         <div className="background">

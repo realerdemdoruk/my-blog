@@ -18,6 +18,12 @@ const components = {
   Image: RoundedImage,
   a: CustomLink,
   pre: Pre,
+  h2: (props: any) => (
+    <h2 className="text-2xl font-bold  dark:text-slate-300" {...props} />
+  ),
+  h3: (props: any) => (
+    <h2 className="text-2xl font-bold  dark:text-slate-400" {...props} />
+  ),
 };
 
 type MdxProps = {
@@ -27,7 +33,7 @@ type MdxProps = {
 export default function Mdx({ code }: MdxProps) {
   const Component = useMDXComponent(code);
   return (
-    <div className="prose prose-pink">
+    <div className="prose prose-pink dark:text-white ">
       {/* @ts-ignore */}
       <Component components={components} />
     </div>
