@@ -19,7 +19,10 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
 
   return (
     <article className="z-10  mx-auto max-w-3xl flex flex-col w-full px-4 py-10">
-      <h1 className="text-2xl font-bold mb-2 dark:text-slate-300">
+      <h1
+        className="text-2xl font-bold mb-2 dark:text-slate-300
+      duration-1000 ease-in-out transition-all"
+      >
         <Balancer>{post.title}</Balancer>
       </h1>
 
