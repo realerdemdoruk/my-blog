@@ -17,7 +17,7 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={`${raleway.className} min-h-screen flex flex-col duration-1000
-         ease-in-out transition-all flex-1 dark:bg-slate-800 bg-sky-600`}
+         ease-in-out transition-all flex-1 dark:bg-slate-800 bg-sky-700`}
       >
         <Header />
         <div className="background">
