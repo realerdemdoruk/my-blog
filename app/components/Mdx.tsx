@@ -1,5 +1,6 @@
 import { useMDXComponent } from "next-contentlayer/hooks";
 import RoundedImage from "./RoundedImage";
+import CustomLink from "./CustomLink";
 import { CopyButton } from "./CopyButton";
 
 // @ts-ignore
@@ -15,10 +16,11 @@ export const Pre = ({ children, raw, ...props }) => {
 
 const components = {
   Image: RoundedImage,
+  a: CustomLink,
   pre: Pre,
   h2: (props: any) => (
     <h2
-      className="text-2xl font-bold duration-1000 ease-in-out transition-all dark:text-slate-300"
+      className="text-2xl font-bold           duration-1000 ease-in-out transition-all dark:text-slate-300"
       {...props}
     />
   ),
