@@ -38,9 +38,13 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
         className="text-2xl font-bold mb-2 dark:text-slate-300
       duration-1000 ease-in-out transition-all"
       >
+<<<<<<< HEAD
         <Balancer>
           <TypingAnimation title={post.title} />
         </Balancer>
+=======
+        <TypingAnimation title={post.title} />
+>>>>>>> 69accf66d5bada1f08eaa5ac4227dc622a140551
       </h1>
 
       <Mdx code={post.body.code} />
