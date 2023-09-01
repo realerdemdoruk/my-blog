@@ -3,6 +3,7 @@ import Mdx from "@/app/components/Mdx";
 import { useMDXComponent } from "next-contentlayer/hooks";
 import { notFound } from "next/navigation";
 import { Balancer } from "react-wrap-balancer";
+
 export async function generateStaticParams() {
   return allPosts.map((post) => ({
     slug: post.slug,

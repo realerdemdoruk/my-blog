@@ -31,7 +31,10 @@ const Header: FC<HeaderProps> = (props) => {
   }, []);
 
   return (
-    <header className="flex items-center justify-between w-full max-w-3xl px-4 py-8 mx-auto">
+    <header
+      className="flex items-center duration-1000 sticky top-0 z-50 ease-in-out transition-all dark:bg-slate-800 bg-slate-500
+    justify-between w-full max-w-3xl px-4 py-8 mx-auto"
+    >
       <div />
       <nav className="flex items-center space-x-4">
         <Link

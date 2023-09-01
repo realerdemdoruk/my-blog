@@ -31,6 +31,13 @@ const components = {
       {...props}
     />
   ),
+
+  strong: (props: any) => (
+    <strong
+      className="font-bold duration-1000 ease-in-out transition-all text-red-800"
+      {...props}
+    />
+  ),
 };
 
 type MdxProps = {
