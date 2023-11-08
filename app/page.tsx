@@ -1,5 +1,5 @@
 "use client";
-import { allPosts, Post } from "@/.contentlayer/generated";
+import { allPosts } from "@/.contentlayer/generated";
 import { compareDesc, format } from "date-fns";
 import Link from "next/link";
 import React from "react";
@@ -40,7 +40,7 @@ export default function Blog() {
       </h1>
       {/* Blog Posts */}
       <div className="mt-10 flex flex-col space-y-3">
-        {posts.map((post: Post) => (
+        {posts.map((post: any) => (
           <Link
             href={post.url}
             key={post.url}
